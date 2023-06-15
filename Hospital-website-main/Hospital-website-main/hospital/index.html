@@ -1,23 +1,23 @@
 <?php
 
-$conn = mysqli_connect('localhost','root','','contact_db') or die('connection failed');
+// $conn = mysqli_connect('localhost','root','','contact_db') or die('connection failed');
 
-if(isset($_POST['submit'])){
+// if(isset($_POST['submit'])){
 
-   $name = mysqli_real_escape_string($conn, $_POST['name']);
-   $email = mysqli_real_escape_string($conn, $_POST['email']);
-   $number = $_POST['number'];
-   $date = $_POST['date'];
+//    $name = mysqli_real_escape_string($conn, $_POST['name']);
+//    $email = mysqli_real_escape_string($conn, $_POST['email']);
+//    $number = $_POST['number'];
+//    $date = $_POST['date'];
 
-   $insert = mysqli_query($conn, "INSERT INTO `contact_form`(name, email, number, date) VALUES('$name','$email','$number','$date')") or die('query failed');
+//    $insert = mysqli_query($conn, "INSERT INTO `contact_form`(name, email, number, date) VALUES('$name','$email','$number','$date')") or die('query failed');
 
-   if($insert){
-      $message[] = 'appointment made successfully!';
-   }else{
-      $message[] = 'appointment failed';
-   }
+//    if($insert){
+//       $message[] = 'appointment made successfully!';
+//    }else{
+//       $message[] = 'appointment failed';
+//    }
 
-}
+// }
 ?>
 
 
@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>complete responsive hospital website create by win coder</title>
+    <title>Institute of Medical Science and Research Mumbai</title>
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -46,12 +46,12 @@ if(isset($_POST['submit'])){
 
     <nav class="navbar">
         <a href="#home">home</a>
-        <a href="#about">about</a>
-        <a href="#services">services</a>
-        <a href="#doctors">doctors</a>
-        <a href="#appointment">appointment</a>
+        <a href="#about">courses</a>
+        <a href="#services">faculty</a>
+        <a href="#doctors">blogs</a>
+        <a href="#appointment">contact us</a>
         <a href="#review">review</a>
-        <a href="#blogs">blogs</a>
+        <a href="form.html">login</a>
     </nav>
 
     <div id="menu-btn" class="fas fa-bars"></div>
@@ -69,9 +69,11 @@ if(isset($_POST['submit'])){
     </div>
 
     <div class="content">
-        <h3>we take care of your healthy life</h3>
-        <p> A person who has good physical health is likely to have bodily functions and processes working at their peak.</p>
-        <a href="#appointment" class="btn"> appointment us <span class="fas fa-chevron-right"></span> </a>
+        <h3>Elevate your medical skills</h3>
+        <h2>Online Medical Courses</h2>
+        <p>Education 
+            never ends for doctors</p>
+        <a href="#appointment" class="btn"> Enroll Now <span class="fas fa-chevron-right"></span> </a>
     </div>
 
 </section>
@@ -139,25 +141,25 @@ if(isset($_POST['submit'])){
 
 <section class="services" id="services">
 
-    <h1 class="heading"> our <span>services</span> </h1>
+    <h1 class="heading"> our <span>courses</span> </h1>
 
     <div class="box-container">
 
         <div class="box">
             <i class="fas fa-notes-medical"></i>
-            <h3>free checkups</h3>
+            <h3>Advance Diploma Courses</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, omnis.</p>
-            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            <a href="advance_courses.html" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
         </div>
 
         <div class="box">
             <i class="fas fa-ambulance"></i>
-            <h3>24/7 ambulance</h3>
+            <h3>Certificate Courses</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, omnis.</p>
-            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            <a href="certificate_courses.html" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
         </div>
 
-        <div class="box">
+        <!-- <div class="box">
             <i class="fas fa-user-md"></i>
             <h3>expert doctors</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, omnis.</p>
@@ -183,7 +185,7 @@ if(isset($_POST['submit'])){
             <h3>total care</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, omnis.</p>
             <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
-        </div>
+        </div> -->
 
     </div>
 
@@ -197,7 +199,7 @@ if(isset($_POST['submit'])){
 
 <section class="doctors" id="doctors">
 
-    <h1 class="heading"> our <span>doctors</span> </h1>
+    <h1 class="heading"> our <span>Faculty</span> </h1>
 
     <div class="box-container">
 
@@ -249,7 +251,7 @@ if(isset($_POST['submit'])){
                 <a href="#" class="fab fa-linkedin"></a>
             </div>
         </div>
-
+<!-- 
         <div class="box">
             <img src="image/doc-5.jpg" alt="">
             <h3>win coder</h3>
@@ -306,7 +308,7 @@ if(isset($_POST['submit'])){
                 <a href="#" class="fab fa-instagram"></a>
                 <a href="#" class="fab fa-linkedin"></a>
             </div>
-        </div>
+        </div> -->
 
     </div>
 
@@ -318,7 +320,7 @@ if(isset($_POST['submit'])){
 
 <section class="appointment" id="appointment">
 
-    <h1 class="heading"> <span>appointment</span> now </h1>    
+    <h1 class="heading"> <span>contact</span> now </h1>    
 
     <div class="row">
 

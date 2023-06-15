@@ -531,10 +531,17 @@ section:nth-child(even){
 }
 
 
+/* New CSS */
+.Enroll-form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    padding-top: 10rem;
+}
 
 
-
-
+/* End */
 
 
 
