@@ -540,6 +540,58 @@ section:nth-child(even){
     padding-top: 10rem;
 }
 
+.coursesheading{
+    /* text-align: center; */
+    padding-bottom: 2rem;
+    /* text-shadow: var(--text-shadow); */
+    text-transform: uppercase;
+    color:var(--black);
+    font-size: 2rem;
+    letter-spacing: .4rem;
+}
+
+.coursesheading span{
+    text-transform: uppercase;
+    color:var(--green);
+}
+ /* open sub*/ 
+   
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #04fab06b;
+    min-width: 160rem;
+    font-size: 1em;
+    overflow: auto;
+    /* transition: 2s; */
+    box-shadow: 0rem 8rem 16rem 0rem rgba(0.2,0.2,0.2,0.2);
+  }
+  
+  .dropdown-content p {
+    color: black;
+    padding-top: 0.2rem;
+    margin-right: 5rem;
+    text-decoration: none;
+    display: block;
+  }
+
+  .show {display:block;
+}
+    
+  .syllabusheading{
+    /* text-align: center; */
+    padding-bottom: 2rem;
+    /* text-shadow: var(--text-shadow); */
+    text-transform: uppercase;
+    color:var(--black);
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+}
+
+.syllabusheading span{
+    text-transform: uppercase;
+    color:var(--green);
+}
 
 /* End */
 
