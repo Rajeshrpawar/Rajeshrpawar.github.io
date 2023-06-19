@@ -39,53 +39,37 @@
     <!-- header section ends -->
     <section class="appointment" id="appointment">
 
-        <!-- <h1 class="heading"> <span>contact</span> now </h1> -->
+        <!-- <h1 class="heading" style="margin-top: 10rem;"> <span>Login</h1> -->
 
-        <div class="row" style="margin-top: 10rem;">
+        <div class="row">
 
             <div class="image">
-            <img src="image/appointment-img.svg" alt="">
-        </div>
+                <img src="image/appointment-img.svg" alt="">
+            </div>
 
             <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                 <!-- <?php
-        if(isset($message)) {
-            foreach($message as $message) {
-            echo'<p class ="message">'.$message.'</p>';
-            }
-        }
-    ?> -->
+                if(isset($message)) {
+                    foreach($message as $message) {
+                    echo'<p class ="message">'.$message.'</p>';
+                    }
+                }
+            ?> -->
 
-                <h3 class="heading"><span>Enroll Now</span></h3>
-                <p class="formtext">Name of Candidate <span>*</span></p>
-                <input type="text" name="name" placeholder="your name" class="box">
-                <p class="formtext">Address<span>*</span></p>
-                <input type="number" name="number" placeholder="your number" class="box">
-                <p class="formtext">Mobile No.<span>*</span></p>
-                <input type="email" name="email" placeholder="your email" class="box">
-                <p class="formtext">Aadhar number<span>*</span></p>
-                <input type="date" name="date" class="box">
-                <p class="formtext">Age <span>*</span></p>
-                <input type="email" name="email" placeholder="your email" class="box">
-                <p class="formtext">Last attended degree courses <span>*</span></p>
-                <input type="email" name="email" placeholder="your email" class="box">
-                <p class="formtext">year of passing <span>*</span></p>
-                <input type="email" name="email" placeholder="your email" class="box">
-                <p class="formtext">mark obtained in final exam <span>*</span></p>
-                <input type="email" name="email" placeholder="your email" class="box">
-                <p class="formtext">Application for course <span>*</span></p>
-                <input type="email" name="email" placeholder="your email" class="box">
+                <h3 class="heading"><span>Login</span> </h3>
+                <input type="text" name="name" placeholder="USERNAME" class="box" style="text-align: center;">
+                <input type="number" name="number" placeholder="PASSWORD" class="box" style="text-align: center;">
+                <!-- <input type="email" name="email" placeholder="your email" class="box">
+                <input type="date" name="date" class="box"> -->
                 <div>
-                    <input type="submit" name="submit" value="enroll now" class="btn">
+
+                    <input type="submit" name="submit" value="LOGIN NOW" class="btn">
                 </div>
             </form>
 
         </div>
 
     </section>
-
-
-
 
     <!-- footer section starts  -->
 
