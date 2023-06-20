@@ -634,7 +634,7 @@ details{
     padding: .5em 1.3rem;
     list-style: none;
     display: flex;
-    justify-content: space-between;  
+    justify-content: start;  
     transition: height 1s ease;
   }
   
@@ -642,7 +642,7 @@ details{
     display: none;
   }
   
-  summary:after{
+  summary:before{
     content: "\002B";
   }
   
@@ -652,7 +652,7 @@ details{
       background-color: #33d9b2
   }
   
-  details[open] summary:after{
+  details[open] summary:before{
     content: "\00D7";
    
   }
