@@ -67,7 +67,7 @@
 
     <!-- about section starts  -->
 
-    <section class="about" id="about" >
+    <section class="about" id="about">
 
         <h1 class="indexheading"> <span>about</span> us </h1>
 
@@ -141,37 +141,47 @@
 
     <!-- doctors section starts  -->
 
-    <section class="doctors" id="faculty" >
+    <section class="doctors" id="faculty">
 
-        <h1 class="indexheading" style="text-align: left;">our <span>Faculty</span> </h1>
+        <h1 class="indexheading">our <span>Faculty</span> </h1>
         <!-- slider -->
 
         <div class="wrapper">
             <div class="carousel owl-carousel">
-                <div>
+                <div class="facultyslider">
                     <img src="image/doc-1.jpg" alt="">
-                    <h3>name</h3>
-                    <span>expert doctor</span>
+                    <div style="background-color: #33d9b2;">
+                        <h3>Name</h3>
+                        <p>expert doctor</p>
+                    </div>
                 </div>
-                <div>
+                <div class="facultyslider">
                     <img src="image/doc-2.jpg" alt="">
-                    <h3>name</h3>
-                    <span>expert doctor</span>
+                        <div style="background-color: #33d9b2;">
+                        <h3>name</h3>
+                        <p>expert doctor</p>
+                    </div>
                 </div>
-                <div>
+                <div class="facultyslider">
                     <img src="image/doc-3.jpg" alt="">
+                    <div style="background-color: #33d9b2;">
                     <h3>name</h3>
-                    <span>expert doctor</span>
+                    <p>expert doctor</p>
                 </div>
-                <div>
+                </div>
+                <div class="facultyslider">
                     <img src="image/doc-4.jpg" alt="">
+                    <div style="background-color: #33d9b2;">
                     <h3>name</h3>
-                    <span>expert doctor</span>
+                    <p>expert doctor</p>
                 </div>
-                <div>
+                </div>
+                <div class="facultyslider">
                     <img src="image/doc-5.jpg" alt="">
+                    <div style="background-color: #33d9b2;">
                     <h3>name</h3>
-                    <span>expert doctor</span>
+                    <p>expert doctor</p>
+                </div>
                 </div>
             </div>
         </div>
@@ -183,10 +193,37 @@
 
     <!-- doctors section ends -->
 
-    
+    <!-- why us section start -->
+    <section class="services" id="">
+        
+        <div class="box-container" style="margin: 10rem;">
+            <div class="image">
+                <img src="image/pexels-rdne-stock-project-6129494.jpg" style="width: 80%;" alt="">
+            </div>
+            <div class="box">
+
+                <h1 class="indexheading">why <span>choose us ?</span></h1>
+
+                <p>Our Medical education is the bedrock on which high-quality healthcare is built. Training is important
+                    but
+                    education is vital. Of course, the young doctor needs extensive knowledge and practical skills and
+                    that
+                    is where training is important. But education during these formative years will establish the
+                    principles
+                    that will guide doctors through their ever-changing careers. Medical students must be educated in an
+                    atmosphere where excellence is expected. It is this education in which we pursue the highest
+                    standards
+                    of health education. We take a unique approach to medical education, with clinical and practical
+                    training.</p>
+            </div>
+        </div>
+    </section>
+    <!-- why us section ends -->
+
+
     <!-- review section starts  -->
 
-    <section class="review" id="review" >
+    <section class="review" id="review">
 
         <h1 class="indexheading"> Students <span>TESTIMONIALS.</span> </h1>
 
@@ -244,7 +281,7 @@
     <!-- review section ends -->
     <!-- icons section starts  -->
 
-    <section class="icons-container" >
+    <section class="icons-container">
 
         <div class="icons">
             <i class="fa fa-graduation-cap"></i>
@@ -276,7 +313,7 @@
 
     <!-- blogs section starts  -->
 
-    <section class="blogs" id="blogs" >
+    <section class="blogs" id="blogs">
 
         <h1 class="indexheading"> our <span>blogs</span> </h1>
 
@@ -420,27 +457,27 @@
     <!-- slider js -->
     <script>
         $(".carousel").owlCarousel({
-          margin: 20,
-          loop: true,
-          autoplay: true,
-          autoplayTimeout: 2000,
-          autoplayHoverPause: true,
-          responsive: {
-            0:{
-              items:1,
-              nav: false
-            },
-            600:{
-              items:2,
-              nav: false
-            },
-            1000:{
-              items:3,
-              nav: false
+            margin: 20,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                600: {
+                    items: 2,
+                    nav: false
+                },
+                1000: {
+                    items: 3,
+                    nav: false
+                }
             }
-          }
         });
-     </script>
+    </script>
 </body>
 
 </html>
