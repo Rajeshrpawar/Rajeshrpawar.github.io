@@ -695,8 +695,8 @@ details{
     margin-top: 40px;
   }
   .owl-dot{
-    height: 15px;
-    width: 45px;
+    height: 1.5rem;
+    width: 5rem;
     margin: 0 5px;
     outline: none;
     border-radius: 14px;
