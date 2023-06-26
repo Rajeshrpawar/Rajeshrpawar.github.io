@@ -819,7 +819,7 @@ details{
         text-shadow: var(--text-shadow);
         text-transform: uppercase;
         color:var(--black);
-        font-size: 2rem;
+        font-size: 2.5rem;
         letter-spacing: .4rem;
     }
     
@@ -829,14 +829,14 @@ details{
     }
 
     .home .content h3{
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         color:var(--black);
         line-height: 1.8;
         text-shadow: var(--text-shadow);
     }
     
     .home .content h2{
-        font-size: 2rem;
+        font-size: 1.3rem;
         color:var(--light-color);
         line-height: 1.8;
         padding: 1rem 0;
