@@ -1,3 +1,36 @@
+<!-- php code -->
+<?php
+session_start();
+// Change this to your connection info.
+$DATABASE_HOST = 'localhost';
+$DATABASE_USER = 'root';
+$DATABASE_PASS = '';
+$DATABASE_NAME = 'phplogin';
+// Try and connect using the info above.
+$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+if ( mysqli_connect_errno() ) {
+	// If there is an error with the connection, stop the script and display the error.
+	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+}
+// Now we check if the data from the login form was submitted, isset() will check if the data exists.
+if ( !isset($_POST['username'], $_POST['password']) ) {
+	// Could not get the data that should have been sent.
+	exit('Please fill both the username and password fields!');
+}
+// Prepare our SQL, preparing the SQL statement will prevent SQL injection.
+if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
+	// Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
+	$stmt->bind_param('s', $_POST['username']);
+	$stmt->execute();
+	// Store the result so we can check if the account exists in the database.
+	$stmt->store_result();
+
+
+	$stmt->close();
+}
+?>
+<!-- php code -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,15 +91,16 @@
 
                 <h3 class="heading"><span>Login</span> </h3>
                 <!-- <p class="formtext" style=" margin-top: 3rem;">username <span>*</span></p> -->
-                <input type="text" name="name" placeholder="Username" class="loginbox" style="text-align: center; margin-top: 5rem;">
+                <input type="text" name="username" placeholder="Username" class="loginbox" style="text-align: center; margin-top: 5rem;">
                 <!-- <p class="formtext">password <span>*</span></p> -->
-                <input type="password" name="number" placeholder="Password " class="loginbox" style="text-align: center; margin-top: 2rem;">
+                <input type="password" name="password" placeholder="Password " class="loginbox" style="text-align: center; margin-top: 2rem;">
                 <!-- <input type="email" name="email" placeholder="your email" class="box">
                 <input type="date" name="date" class="box"> -->
                 <div style="margin-top: 5rem;">
-
                     <input type="submit" name="submit" value="LOGIN NOW" class="btn">
                 </div>
+
+                
             </form>
 
         </div>
