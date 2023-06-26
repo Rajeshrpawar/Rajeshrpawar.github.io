@@ -738,6 +738,21 @@ details{
     text-align: center;
     color:var(--light-color);
 }
+
+.mainheading{
+    text-align: center;
+    padding-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color:var(--black);
+    font-size: 5rem;
+    letter-spacing: .4rem;
+}
+
+.mainheading span{
+    text-transform: uppercase;
+    color:var(--green);
+}
 /* End */
 
 
@@ -798,5 +813,33 @@ details{
     html{
         font-size: 50%;
     }
+    .mainheading{
+        text-align: center;
+        padding-bottom: 2rem;
+        text-shadow: var(--text-shadow);
+        text-transform: uppercase;
+        color:var(--black);
+        font-size: 2rem;
+        letter-spacing: .4rem;
+    }
+    
+    .mainheading span{
+        text-transform: uppercase;
+        color:var(--green);
+    }
 
+    .home .content h3{
+        font-size: 1.5rem;
+        color:var(--black);
+        line-height: 1.8;
+        text-shadow: var(--text-shadow);
+    }
+    
+    .home .content h2{
+        font-size: 2rem;
+        color:var(--light-color);
+        line-height: 1.8;
+        padding: 1rem 0;
+    }
+    
 }
