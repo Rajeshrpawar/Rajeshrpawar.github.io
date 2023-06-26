@@ -48,16 +48,15 @@
                 <img src="image/appointment-img.svg" alt="">
             </div>
 
-            <form action="thank-you.html">
-                <!-- 
+
             <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
-                <?php
+                <!-- <?php
         if(isset($message)) {
             foreach($message as $message) {
             echo'<p class ="message">'.$message.'</p>';
             }
         }
-    ?> -->
+    ?>  -->
 
                 <h3 class="heading"><span>Enroll Now</span></h3>
                 <div class="form-group fullname">
@@ -110,11 +109,13 @@
                 </div>
                 <div class="form-group date">
                     <p class="formtext">Final Year Marksheet <span>*</span></p>
-                    <input accept="application/pdf,application/jpg" type="file" id="marksheet" name="marksheet" class="box">
+                    <input accept="application/pdf,application/jpg" type="file" id="marksheet" name="marksheet"
+                        class="box">
                 </div>
                 <div class="form-group date">
                     <p class="formtext">Provisional/Permanent Registration <span>*</span></p>
-                    <input accept="application/pdf,application/jpg" type="file" id="registration" name="registration" class="box">
+                    <input accept="application/pdf,application/jpg" type="file" id="registration" name="registration"
+                        class="box">
                 </div>
                 <div class="form-group date">
                     <p class="formtext">Passport Size Photo <span>*</span></p>
@@ -122,11 +123,13 @@
                 </div>
                 <div class="form-group date">
                     <p class="formtext">Aadhar Card <span>*</span></p>
-                    <input accept="application/jpg,application/pdf" type="file" id="aadharCard" name="aadharCard" class="box">
+                    <input accept="application/jpg,application/pdf" type="file" id="aadharCard" name="aadharCard"
+                        class="box">
                 </div>
                 <div class="form-group date">
                     <p class="formtext">Application Fees Recipt <span>*</span></p>
-                    <input accept="application/pdf, application/jpg" type="file" id="feesReceipt" name="feesReceipt" class="box">
+                    <input accept="application/pdf, application/jpg" type="file" id="feesReceipt" name="feesReceipt"
+                        class="box">
                 </div>
                 <div class="form-group submit-btn">
                     <input type="submit" value="Submit">
