@@ -48,8 +48,10 @@
                 <img src="image/appointment-img.svg" alt="">
             </div>
 
+            <form action="thank-you.html">
+                <!-- 
             <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
-                <!-- <?php
+                <?php
         if(isset($message)) {
             foreach($message as $message) {
             echo'<p class ="message">'.$message.'</p>';
@@ -58,51 +60,76 @@
     ?> -->
 
                 <h3 class="heading"><span>Enroll Now</span></h3>
-                <p class="formtext">Name of Candidate <span>*</span></p>
-                <input type="text" name="name" placeholder="your name" class="box">
-                <p class="formtext">Address<span>*</span></p>
-                <input type="text" name="Address" placeholder="your Address" class="box">
-                <p class="formtext">Mobile No.<span>*</span></p>
-                <input type="number" name="number" placeholder="your number" class="box">
-                <p class="formtext">Aadhar number<span>*</span></p>
-                <input type="number" name="Aadhar" class="box">
-                <p class="formtext">Age <span>*</span></p>
-                <input type="number" name="Age" placeholder="your Age" class="box">
-                <p class="formtext">Last attended degree courses <span>*</span></p>
-                <!-- <label for="degree-names" class="formtext">Last attended degree courses <span>*</span></label> -->
-                <select name="degree-names" id="degree-names" class="box">
-                    <option value="MBBS">MBBS</option>
-                    <option value="BHMS">BHMS</option>
-                    <option value="BUMS">BUMS</option>
-                    <option value="BAMS">BAMS</option>
-                </select>
-                <!-- <input type="email" name="email" placeholder="your email" class="box"> -->
-                <p class="formtext">year of passing <span>*</span></p>
-                <input type="date" name="passingYear" placeholder="Year of passing" class="box">
-                <p class="formtext">mark obtained in final exam <span>*</span></p>
-                <input type="" name="marks" placeholder="Marks in Percentage" class="box">
-                <p class="formtext">Application for course <span>*</span></p>
-                <!-- <input type="email" name="email" placeholder="your email" class="box"> -->
-                <select name="course-names" id="course-names" class="box">
-                    <option value="CCH">CCH</option>
-                    <option value="CGO">CGO</option>
-                    <option value="CSD">CSD</option>
-                    <option value="CVD">CVD</option>
-                </select>
-                <p class="formtext">Final Year Marksheet <span>*</span></p>
-                <input accept="application/pdf,application/jpg" type="file" id="marksheet" name="filename" class="box">
-                <p class="formtext">Provisional/Permanent Registration <span>*</span></p>
-                <input accept="application/pdf,application/jpg" type="file" id="Registration" name="filename"
-                    class="box">
-                <p class="formtext">Passport Size Photo <span>*</span></p>
-                <input accept="application/jpg" type="file" id="myFile" name="Photo" class="box">
-                <p class="formtext">Aadhar Card <span>*</span></p>
-                <input accept="application/jpg,application/pdf" type="file" id="aadharCard" name="filename" class="box">
-                <p class="formtext">Application Fees Recipt <span>*</span></p>
-                <input accept="application/pdf, application/jpg" type="file" id="feesRecipt" name="filename"
-                    class="box">
-                <div>
-                    <input type="submit" name="submit" value="enroll now" class="btn">
+                <div class="form-group fullname">
+                    <p class="formtext">Name of Candidate <span>*</span></p>
+                    <input type="text" id="fullname" placeholder="Enter your full name">
+                </div>
+                <div class="form-group email">
+                    <p class="formtext">Email<span>*</span></p>
+                    <input type="text" id="email" placeholder="Enter your email address">
+                </div>
+                <div class="form-group password">
+                    <p class="formtext">Mobile No.<span>*</span></p>
+                    <input type="number" id="mobileNumber" placeholder="Enter your Mobile Number">
+                </div>
+                <div class="form-group password">
+                    <p class="formtext">Aadhar number<span>*</span></p>
+                    <input type="number" id="aadharNumber" placeholder="Enter your Aadhar Number">
+                </div>
+                <div class="form-group date">
+                    <p class="formtext">Age <span>*</span></p>
+                    <input type="number" id="age" placeholder="Enter your Age">
+                </div>
+                <div class="form-group date">
+                    <p class="formtext">Passing Year of Final Exam <span>*</span></p>
+                    <input type="date" id="passingYear" placeholder="Select Passing Year of Final Exam">
+                </div>
+                <div class="form-group date">
+                    <p class="formtext">Marks Obtain in Final Exam <span>*</span></p>
+                    <input type="number" id="marks" placeholder="Enter your Age">
+                </div>
+                <div class="form-group gender">
+                    <p class="formtext">Last Attended Degree<span>*</span></p>
+                    <select id="degree">
+                        <option value="" selected disabled>Select your Last Attended Degree</option>
+                        <option value="MBBS">MBBS</option>
+                        <option value="BHMS">BHMS</option>
+                        <option value="BUMS">BUMS</option>
+                        <option value="BAMS">BAMS</option>
+                    </select>
+                </div>
+                <div class="form-group gender">
+                    <p class="formtext">Application for course<span>*</span></p>
+                    <select id="course">
+                        <option value="" selected disabled>Select course applying for</option>
+                        <option value="CCH">CCH</option>
+                        <option value="CGO">CGO</option>
+                        <option value="CSD">CSD</option>
+                        <option value="CVD">CVD</option>
+                    </select>
+                </div>
+                <div class="form-group date">
+                    <p class="formtext">Final Year Marksheet <span>*</span></p>
+                    <input accept="application/pdf,application/jpg" type="file" id="marksheet" name="marksheet">
+                </div>
+                <div class="form-group date">
+                    <p class="formtext">Provisional/Permanent Registration <span>*</span></p>
+                    <input accept="application/pdf,application/jpg" type="file" id="registration" name="registration">
+                </div>
+                <div class="form-group date">
+                    <p class="formtext">Passport Size Photo <span>*</span></p>
+                    <input accept="application/jpg" type="file" id="photo" name="photo">
+                </div>
+                <div class="form-group date">
+                    <p class="formtext">Aadhar Card <span>*</span></p>
+                    <input accept="application/jpg,application/pdf" type="file" id="aadharCard" name="aadharCard">
+                </div>
+                <div class="form-group date">
+                    <p class="formtext">Application Fees Recipt <span>*</span></p>
+                    <input accept="application/pdf, application/jpg" type="file" id="feesReceipt" name="feesReceipt">
+                </div>
+                <div class="form-group submit-btn">
+                    <input type="submit" value="Submit">
                 </div>
             </form>
 
@@ -112,52 +139,173 @@
 
 
 
- <!-- footer section starts  -->
+    <!-- footer section starts  -->
 
- <section class="footer">
+    <section class="footer">
 
-    <div class="box-container">
+        <div class="box-container">
 
-        <div class="box">
-            <h3>Institute of Medical Science And Research, Mumbai</h3>
-            <a> <i class="fas fa-map-marker-alt"></i>Regional Center: 3rd Floor, Rahat Hospital Campus, Near Center Naka, Opp. MGM School , Main Road New Baijipura, 431001.</a>
-            <a><i class="fas fa-map-marker-alt"></i>Regi. Off. : 303, 3rd Floor, Parth Solitaire, Kalamboli, Sector 9E Navi Mumbai -410218(MH). </a>
-        </div>
+            <div class="box">
+                <h3>Institute of Medical Science And Research, Mumbai</h3>
+                <a> <i class="fas fa-map-marker-alt"></i>Regional Center: 3rd Floor, Rahat Hospital Campus, Near Center
+                    Naka, Opp. MGM School , Main Road New Baijipura, 431001.</a>
+                <a><i class="fas fa-map-marker-alt"></i>Regi. Off. : 303, 3rd Floor, Parth Solitaire, Kalamboli, Sector
+                    9E Navi Mumbai -410218(MH). </a>
+            </div>
 
-        <div class="box">
-            <h3>Certificate Courses</h3>
-            <a href="CertificateCourses/CSVD.html"> <i class="fas fa-chevron-right"></i> Skin And Venereal Disease
-                (CSVD) </a>
-            <a href="CertificateCourses/ChildHealth.html"> <i class="fas fa-chevron-right"></i> Child Health </a>
-            <a href="CertificateCourses/CGO.html"> <i class="fas fa-chevron-right"></i> Gynecology And Obstetrics
-                (CGO) </a>
-            <!-- <a href="#"> <i class="fas fa-chevron-right"></i> diagnosis </a>
+            <div class="box">
+                <h3>Certificate Courses</h3>
+                <a href="CertificateCourses/CSVD.html"> <i class="fas fa-chevron-right"></i> Skin And Venereal Disease
+                    (CSVD) </a>
+                <a href="CertificateCourses/ChildHealth.html"> <i class="fas fa-chevron-right"></i> Child Health </a>
+                <a href="CertificateCourses/CGO.html"> <i class="fas fa-chevron-right"></i> Gynecology And Obstetrics
+                    (CGO) </a>
+                <!-- <a href="#"> <i class="fas fa-chevron-right"></i> diagnosis </a>
             <a href="#"> <i class="fas fa-chevron-right"></i> ambulance service </a> -->
+            </div>
+
+            <div class="box">
+                <h3>Contact info</h3>
+                <a> <i class="fas fa-phone"></i> 0240-2300200 </a>
+                <a> <i class="fas fa-phone"></i> +91 9595950180 </a>
+                <a> <i class="fas fa-envelope"></i> adagfgas@gmail.com </a>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a> <i class="fab fa-twitter"></i> twitter </a>
+                <a> <i class="fab fa-instagram"></i> instagram </a>
+                <a> <i class="fab fa-linkedin"></i> linkedin </a>
+            </div>
+
         </div>
 
-        <div class="box">
-            <h3>Contact info</h3>
-            <a> <i class="fas fa-phone"></i> 0240-2300200 </a>
-            <a> <i class="fas fa-phone"></i> +91 9595950180 </a>
-            <a> <i class="fas fa-envelope"></i> adagfgas@gmail.com </a>
-        </div>
+        <div class="credit"> created by <span>Rajesh</span> | all rights reserved </div>
 
-        <div class="box">
-            <h3>follow us</h3>
-            <a > <i class="fab fa-twitter"></i> twitter </a>
-            <a > <i class="fab fa-instagram"></i> instagram </a>
-            <a > <i class="fab fa-linkedin"></i> linkedin </a>
-        </div>
+    </section>
 
-    </div>
-
-    <div class="credit"> created by <span>Rajesh</span> | all rights reserved </div>
-
-</section>
-
-<!-- footer section ends -->
+    <!-- footer section ends -->
 
     <script src="js/script.js"></script>
+
+    <script>
+        // form validation start
+
+        // Selecting form and input elements
+        const form = document.querySelector("form");
+        // const passwordInput = document.getElementById("password");
+        // const passToggleBtn = document.getElementById("pass-toggle-btn");
+
+        // Function to display error messages
+        const showError = (field, errorText) => {
+            field.classList.add("error");
+            const errorElement = document.createElement("small");
+            errorElement.classList.add("error-text");
+            errorElement.innerText = errorText;
+            field.closest(".form-group").appendChild(errorElement);
+        }
+
+        // Function to handle form submission
+        const handleFormData = (e) => {
+            e.preventDefault();
+
+            // Retrieving input elements
+            const fullnameInput = document.getElementById("fullname");
+            const emailInput = document.getElementById("email");
+            const mobileNumberInput = document.getElementById("mobileNumber");
+            const aadharNumberInput = document.getElementById("aadharNumber");
+            const ageInput = document.getElementById("age");
+            const passingYearInput = document.getElementById("passingYear");
+            const marksInput = document.getElementById("marks");
+            const degreeInput = document.getElementById("degree");
+            const courseInput = document.getElementById("course");
+            const marksheetInput = document.getElementById("marksheet");
+            const registrationInput = document.getElementById("registration");
+            const photoInput = document.getElementById("photo");
+            const aadharCardInput = document.getElementById("aadharCard");
+            const feesReceiptInput = document.getElementById("feesReceipt");
+
+            // Getting trimmed values from input fields
+            const fullname = fullnameInput.value.trim();
+            const email = emailInput.value.trim();
+            const mobileNumber = mobileNumberInput.value.trim();
+            const aadharNumber = aadharNumberInput.value;
+            const age = ageInput.value;
+            const passingYear = passingYearInput.value;
+            const marks = marksInput.value;
+            const degree = degreeInput.value;
+            const course = courseInput.value;
+            const marksheet = marksheetInput.value;
+            const registration = registrationInput.value;
+            const photo = photoInput.value;
+            const aadharCard = aadharCardInput.value;
+            const feesReceipt = feesReceiptInput.value;
+
+            // Regular expression pattern for email validation
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            // Clearing previous error messages
+            document.querySelectorAll(".form-group .error").forEach(field => field.classList.remove("error"));
+            document.querySelectorAll(".error-text").forEach(errorText => errorText.remove());
+
+            // Performing validation checks
+            if (fullname === "") {
+                showError(fullnameInput, "Enter your full name");
+            }
+            if (!emailPattern.test(email)) {
+                showError(emailInput, "Enter a valid email address");
+            }
+            if (mobileNumber === "") {
+                showError(mobileNumberInput, "Enter your Mobile Number");
+            }
+            if (age === "") {
+                showError(ageInput, "Enter your Age");
+            }
+            if (passingYear === "") {
+                showError(passingYearInput, "Enter your passing Year");
+            }
+            if (marks === "") {
+                showError(marksInput, "Enter your marks");
+            }
+            if (degree === "") {
+                showError(degreeInput, "select last attended degree");
+            }
+            if (course === "") {
+                showError(courseInput, "select course want to apply");
+            }
+            if (marksheet === "") {
+                showError(marksheetInput, "Upload Marksheet");
+            }
+            if (registration === "") {
+                showError(registrationInput, "Upload registration file");
+            }
+            if (photo === "") {
+                showError(photoInput, "Upload photo");
+            }
+            if (aadharCard === "") {
+                showError(aadharCardInput, "Upload Aadhar Card");
+            }
+            if (feesReceipt === "") {
+                showError(feesReceiptInput, "Upload fees Receipt");
+            }
+            if (aadharNumber === "") {
+                showError(aadharNumberInput, "Enter aadhar Number");
+            }
+
+            // Checking for any remaining errors before form submission
+            const errorInputs = document.querySelectorAll(".form-group .error");
+            if (errorInputs.length > 0) return;
+
+            // Submitting the form
+            form.submit();
+        }
+
+        // Handling form submission event
+        form.addEventListener("submit", handleFormData);
+
+// form validation end
+
+    </script>
 </body>
 
 </html>
