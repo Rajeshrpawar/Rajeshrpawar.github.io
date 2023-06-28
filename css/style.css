@@ -745,7 +745,7 @@ details{
     text-shadow: var(--text-shadow);
     text-transform: uppercase;
     color:var(--black);
-    font-size: 5rem;
+    font-size: 3.5rem;
     letter-spacing: .4rem;
 }
 
