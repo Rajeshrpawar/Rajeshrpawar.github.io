@@ -47,6 +47,8 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
 
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -91,16 +93,46 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
             ?> -->
 
                 <h3 class="heading"><span>Login</span> </h3>
-                <!-- <p class="formtext" style=" margin-top: 3rem;">username <span>*</span></p> -->
-                <input type="text" name="username" placeholder="Username" class="loginbox" style="text-align: center; margin-top: 5rem;">
-                <!-- <p class="formtext">password <span>*</span></p> -->
-                <input type="password" name="password" placeholder="Password " class="loginbox" style="text-align: center; margin-top: 2rem;">
-                <!-- <input type="email" name="email" placeholder="your email" class="box">
-                <input type="date" name="date" class="box"> -->
-                <div style="margin-top: 5rem;">
-                    <input type="submit" name="submit" value="LOGIN NOW" class="btn">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" name="name" class="form-control" value="" maxlength="50" required="">
+                    <span class="text-danger">
+                        <?php if (isset($name_error)) echo $name_error; ?>
+                    </span>
                 </div>
-
+                <div class="form-group ">
+                    <label>Email</label>
+                    <input type="email" name="email" class="form-control" value="" maxlength="30" required="">
+                    <span class="text-danger">
+                        <?php if (isset($email_error)) echo $email_error; ?>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label>Mobile</label>
+                    <input type="text" name="mobile" class="form-control" value="" maxlength="12" required="">
+                    <span class="text-danger">
+                        <?php if (isset($mobile_error)) echo $mobile_error; ?>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" class="form-control" value="" maxlength="8" required="">
+                    <span class="text-danger">
+                        <?php if (isset($password_error)) echo $password_error; ?>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" name="cpassword" class="form-control" value="" maxlength="8" required="">
+                    <span class="text-danger">
+                        <?php if (isset($cpassword_error)) echo $cpassword_error; ?>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" name="signup" value="submit">
+                    
+                </div>
+                Already have a account?<a href="sampleLogin.html" class=" btn-default">Login</a>
                 
             </form>
 
