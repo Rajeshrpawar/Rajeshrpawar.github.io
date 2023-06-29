@@ -1,3 +1,40 @@
+<?php
+
+$conn = mysqli_connect("localhost", "root", "", "hospital");
+
+// Check connection
+if ($conn === false) {
+    die("ERROR: Could not connect. "
+        . mysqli_connect_error());
+}
+
+// Taking all 5 values from the form data(input)
+
+$name    = mysqli_real_escape_string($conn, $_POST['name']);
+$email    = mysqli_real_escape_string($conn, $_POST['email']);
+$number    = mysqli_real_escape_string($conn, $_POST['number']);
+
+// We are going to insert the data into our sampleDB table
+$sql = "INSERT INTO contact_form VALUES ('$name',
+            '$email','$number')";
+
+// Check if the query is successful
+if (mysqli_query($conn, $sql)) {
+    echo "<h3>data stored in a database successfully."
+        . " Please browse your localhost php my admin"
+        . " to view the updated data</h3>";
+
+    echo nl2br("\n$name\n $email\n "
+        . "$number\n ");
+} else {
+    echo "ERROR: Hush! Sorry $sql. "
+        . mysqli_error($conn);
+}
+
+// Close connection
+mysqli_close($conn);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +55,7 @@
 
 <body>
     <!-- header section starts  -->
-
+<!-- 
     <header class="header">
 
         <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> <strong>IMSRM</strong></a>
@@ -35,7 +72,7 @@
 
         <div id="menu-btn" class="fas fa-bars"></div>
 
-    </header>
+    </header> -->
 
     <!-- header section ends -->
     <section class="appointment" id="appointment">
@@ -49,47 +86,47 @@
             </div>
 
 
-            <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
-                <!-- <?php
-        if(isset($message)) {
-            foreach($message as $message) {
-            echo'<p class ="message">'.$message.'</p>';
-            }
-        }
-    ?>  -->
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                <?php
+                if (isset($message)) {
+                    foreach ($message as $message) {
+                        echo '<p class ="message">' . $message . '</p>';
+                    }
+                }
+                ?>
 
                 <h3 class="heading"><span>Enroll Now</span></h3>
                 <div class="form-group fullname">
                     <p class="formtext">Name of Candidate <span>*</span></p>
-                    <input type="text" id="fullname" placeholder="Enter your full name" class="box">
+                    <input type="text" id="fullname" name="name" placeholder="Enter your full name" class="box">
                 </div>
                 <div class="form-group email">
                     <p class="formtext">Email<span>*</span></p>
-                    <input type="text" id="email" placeholder="Enter your email address" class="box">
+                    <input type="text" id="email" name="email" placeholder="Enter your email address" class="box">
                 </div>
                 <div class="form-group password">
                     <p class="formtext">Mobile No.<span>*</span></p>
-                    <input type="number" id="mobileNumber" placeholder="Enter your Mobile Number" class="box">
+                    <input type="number" id="mobileNumber" name="mobileNumber" placeholder="Enter your Mobile Number" class="box">
                 </div>
-                <div class="form-group password">
+                <!-- <div class="form-group password">
                     <p class="formtext">Aadhar number<span>*</span></p>
-                    <input type="number" id="aadharNumber" placeholder="Enter your Aadhar Number" class="box">
+                    <input type="number" id="aadharNumber" name="aadharNumber" placeholder="Enter your Aadhar Number" class="box">
                 </div>
                 <div class="form-group date">
                     <p class="formtext">Age <span>*</span></p>
-                    <input type="number" id="age" placeholder="Enter your Age" class="box">
+                    <input type="number" id="age" placeholder="Enter your Age" name="age" class="box">
                 </div>
                 <div class="form-group date">
                     <p class="formtext">Passing Year of Final Exam <span>*</span></p>
-                    <input type="date" id="passingYear" placeholder="Select Passing Year of Final Exam" class="box">
+                    <input type="date" id="passingYear" name="passingYear" placeholder="Select Passing Year of Final Exam" class="box">
                 </div>
                 <div class="form-group date">
                     <p class="formtext">Marks Obtain in Final Exam <span>*</span></p>
-                    <input type="number" id="marks" placeholder="Enter your Age" class="box">
+                    <input type="number" id="marks" name="marks" placeholder="Enter your Age" class="box">
                 </div>
                 <div class="form-group gender">
                     <p class="formtext">Last Attended Degree<span>*</span></p>
-                    <select id="degree" class="box">
+                    <select id="degree" name="degree" class="box">
                         <option value="" selected disabled>Select your Last Attended Degree</option>
                         <option value="MBBS">MBBS</option>
                         <option value="BHMS">BHMS</option>
@@ -99,7 +136,7 @@
                 </div>
                 <div class="form-group gender">
                     <p class="formtext">Application for course<span>*</span></p>
-                    <select id="course" class="box">
+                    <select id="course" name="course" class="box">
                         <option value="" selected disabled>Select course applying for</option>
                         <option value="CCH">CCH</option>
                         <option value="CGO">CGO</option>
@@ -109,13 +146,11 @@
                 </div>
                 <div class="form-group date">
                     <p class="formtext">Final Year Marksheet <span>*</span></p>
-                    <input accept="application/pdf,application/jpg" type="file" id="marksheet" name="marksheet"
-                        class="box">
+                    <input accept="application/pdf,application/jpg" type="file" id="marksheet" name="marksheet" class="box">
                 </div>
                 <div class="form-group date">
                     <p class="formtext">Provisional/Permanent Registration <span>*</span></p>
-                    <input accept="application/pdf,application/jpg" type="file" id="registration" name="registration"
-                        class="box">
+                    <input accept="application/pdf,application/jpg" type="file" id="registration" name="registration" class="box">
                 </div>
                 <div class="form-group date">
                     <p class="formtext">Passport Size Photo <span>*</span></p>
@@ -123,16 +158,14 @@
                 </div>
                 <div class="form-group date">
                     <p class="formtext">Aadhar Card <span>*</span></p>
-                    <input accept="application/jpg,application/pdf" type="file" id="aadharCard" name="aadharCard"
-                        class="box">
+                    <input accept="application/jpg,application/pdf" type="file" id="aadharCard" name="aadharCard" class="box">
                 </div>
                 <div class="form-group date">
                     <p class="formtext">Application Fees Recipt <span>*</span></p>
-                    <input accept="application/pdf, application/jpg" type="file" id="feesReceipt" name="feesReceipt"
-                        class="box">
-                </div>
+                    <input accept="application/pdf, application/jpg" type="file" id="feesReceipt" name="feesReceipt" class="box">
+                </div> -->
                 <div class="form-group submit-btn">
-                    <input type="submit" value="Submit">
+                    <input type="submit" name="submit" value="Enroll ">
                 </div>
             </form>
 
@@ -191,7 +224,7 @@
 
     <script src="js/script.js"></script>
 
-    <script>
+    <!-- <script>
         // form validation start
 
         // Selecting form and input elements
@@ -306,9 +339,8 @@
         // Handling form submission event
         form.addEventListener("submit", handleFormData);
 
-// form validation end
-
-    </script>
+        // form validation end
+    </script> -->
 </body>
 
 </html>
